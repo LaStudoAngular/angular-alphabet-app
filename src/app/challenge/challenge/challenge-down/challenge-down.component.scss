@@ -7,11 +7,17 @@
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
   }
 
   &__link {
-    margin: 0 .2rem;
+    margin: 0 .4rem;
     font-size: 2rem;
     text-decoration: none;
+
+    &--active {
+      color: darkred;
+      text-decoration: underline;
+    }
   }
 }

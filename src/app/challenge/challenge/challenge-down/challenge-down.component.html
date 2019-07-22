@@ -1,7 +1,11 @@
 <div class="challenge-down">
   <ul class="challenge-down__list">
     <li class="challenge-down__item" *ngFor="let char of chars">
-      <a class="challenge-down__link" routerLink="/challenge/{{ char.letter.charAt(0).toLowerCase() }}">{{ char.letter }}</a>
+      <a
+        class="challenge-down__link" routerLink="/challenge/{{ getID(char) }}"
+        (click)="onSelect(char)"
+        [ngClass]="{'challenge-down__link--active': getID(char) === currentID}"
+      >{{ char.letter }}</a>
     </li>
   </ul>
 </div>
