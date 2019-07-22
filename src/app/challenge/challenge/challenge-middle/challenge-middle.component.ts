@@ -11,7 +11,7 @@ export class ChallengeMiddleComponent implements OnInit {
   char: Char;
   letter: string;
   items: { char: string, checked: boolean }[];
-  tooltipMessage = '';
+  tooltipMessage = 'tooltip';
 
   constructor(
     private charService: CharService

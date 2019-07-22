@@ -7,7 +7,7 @@
         *ngFor="let item of items" (click)="onSelect(item)"
         [ngClass]="{'challenge-middle__item--active': item.checked}"
       >{{ item.char }}</li>
+      <div class="challenge-middle__tooltip">{{ tooltipMessage }}!</div>
     </ul>
-    <div class="challenge-middle__tooltip">{{ tooltipMessage }}!</div>
   </div>
 </div>
