@@ -1,0 +1,26 @@
+.challenge-up {
+  border: cadetblue solid 1px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__letter {
+    font-size: 16rem;
+    color: darkred;
+  }
+
+  &__image {
+    width: 400px;
+    height: auto;
+  }
+
+  &__description {
+    font-size: 3rem;
+    text-transform: capitalize;
+
+    &:first-letter {
+      color: darkred;
+    }
+  }
+}

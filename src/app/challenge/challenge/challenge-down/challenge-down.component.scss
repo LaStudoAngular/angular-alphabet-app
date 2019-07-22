@@ -1,0 +1,17 @@
+.challenge-down {
+  border: cadetblue solid 1px;
+  padding: 2rem;
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  &__link {
+    margin: 0 .2rem;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}

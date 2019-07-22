@@ -1,16 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+// components
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+
+// modules
+import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home/home.module';
+import { ChallengeModule } from './challenge/challenge.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule,
+    ChallengeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

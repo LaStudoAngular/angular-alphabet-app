@@ -1,0 +1,8 @@
+<div class="challenge-middle">
+  <div class="challenge-middle__header">Найдите (кликните) букву <span class="challenge-middle__letter">{{ letter }}</span> в слове:</div>
+  <div class="challenge-middle__container">
+    <ul class="challenge-middle__list">
+      <li class="challenge-middle__item" *ngFor="let item of items" (click)="onSelect(item)">{{ item }}</li>
+    </ul>
+  </div>
+</div>

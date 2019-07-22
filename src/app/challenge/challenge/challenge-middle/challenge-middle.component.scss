@@ -1,0 +1,24 @@
+.challenge-middle {
+  border: cadetblue solid 1px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  &__letter {
+    font-size: 2rem;
+    color: darkred;
+    text-transform: lowercase;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 .4rem;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+}
