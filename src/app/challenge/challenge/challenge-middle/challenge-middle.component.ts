@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CharService } from '../../../service/char.service';
 import { Char } from '../../../models/char.model';
+import {Item} from '../../../interfaces/item';
 
 @Component({
   selector: 'al-challenge-middle',
@@ -10,8 +11,10 @@ import { Char } from '../../../models/char.model';
 export class ChallengeMiddleComponent implements OnInit {
   char: Char;
   letter: string;
-  items: { char: string, checked: boolean }[];
-  tooltipMessage = 'tooltip';
+  items: Item[];
+  tooltipMessage = '';
+  tooltipChecked = false;
+  tooltipShow = false;
 
   constructor(
     private charService: CharService
@@ -32,15 +35,19 @@ export class ChallengeMiddleComponent implements OnInit {
     });
   }
 
-  onSelect(item: { char: string, checked: boolean }): void {
+  onSelect(item: Item): void {
     const originChar = this.letter.toLowerCase();
     const testChar = item.char.toLowerCase();
+    this.tooltipShow = true;
     if (originChar === testChar) {
       item.checked = true;
-      this.tooltipMessage = 'правильно';
+      this.tooltipMessage = 'Правильно';
+      this.tooltipChecked = true;
     } else {
-      this.tooltipMessage = 'не правильно';
+      this.tooltipMessage = 'Не правильно';
+      this.tooltipChecked = false;
     }
+    setTimeout(() => { this.tooltipShow = false; }, 1000);
   }
 
 }
