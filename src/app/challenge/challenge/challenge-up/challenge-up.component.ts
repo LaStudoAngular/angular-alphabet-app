@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {CharService} from '../../../service/char.service';
-import {Char} from '../../../models/char.model';
+import { ActivatedRoute } from '@angular/router';
+import { CharService } from '../../../service/char.service';
+import { Char } from '../../../models/char.model';
 
 @Component({
   selector: 'al-challenge-up',
@@ -17,6 +17,9 @@ export class ChallengeUpComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if (this.char == null) {
+      this.charService.getSingleChar().subscribe(data => this.char = data);
+    }
     this.route.params.subscribe(data => this.char = this.charService.getChar(data.id));
   }
 

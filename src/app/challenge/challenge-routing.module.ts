@@ -5,7 +5,7 @@ import {ChallengeUpComponent} from './challenge/challenge-up/challenge-up.compon
 
 const routes: Routes = [
   { path: '', component: ChallengeComponent, children: [
-      { path: ':id', component: ChallengeUpComponent }
+      { path: ':id', component: ChallengeUpComponent },
     ] }
 ];
 

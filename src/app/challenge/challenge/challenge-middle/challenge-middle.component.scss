@@ -35,6 +35,10 @@
       text-transform: uppercase;
     }
 
+    &:hover {
+      color: forestgreen;
+    }
+
     &--active {
       color: darkred;
     }

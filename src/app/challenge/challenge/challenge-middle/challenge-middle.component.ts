@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CharService } from '../../../service/char.service';
 import { Char } from '../../../models/char.model';
-import {Item} from '../../../interfaces/item';
+import { Item } from '../../../interfaces/item';
 
 @Component({
   selector: 'al-challenge-middle',
   templateUrl: './challenge-middle.component.html',
   styleUrls: ['./challenge-middle.component.scss']
 })
+
 export class ChallengeMiddleComponent implements OnInit {
   char: Char;
   letter: string;
@@ -41,10 +42,8 @@ export class ChallengeMiddleComponent implements OnInit {
   }
 
   onSelect(item: Item): void {
-    const originChar = this.letter.toLowerCase();
-    const testChar = item.char.toLowerCase();
     this.tooltip.show = true;
-    if (originChar === testChar) {
+    if (this.letter.toLowerCase() === item.char.toLowerCase()) {
       item.checked = true;
       this.tooltip.message = this.tooltip.success;
       this.tooltip.checked = true;

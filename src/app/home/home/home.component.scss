@@ -1,0 +1,9 @@
+.alphabet {
+  padding: 10rem 0 0;
+  text-align: center;
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 8rem;
+  }
+}

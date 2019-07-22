@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Char } from '../models/char.model';
-import {BehaviorSubject, Observable} from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,6 @@ export class CharService {
     'армавир',
     'амбразура'
   ]));
-
-  constructor() { }
 
   getChars(): Char[] {
     if (!JSON.parse(localStorage.getItem('chars'))) {
