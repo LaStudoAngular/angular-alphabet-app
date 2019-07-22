@@ -20,5 +20,13 @@
     margin: 0 .4rem;
     font-size: 3rem;
     cursor: pointer;
+
+    &--active {
+      color: darkred;
+    }
+  }
+
+  &__tooltip {
+    text-transform: capitalize;
   }
 }

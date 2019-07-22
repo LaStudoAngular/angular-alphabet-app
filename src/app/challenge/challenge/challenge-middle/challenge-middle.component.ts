@@ -10,7 +10,8 @@ import { Char } from '../../../models/char.model';
 export class ChallengeMiddleComponent implements OnInit {
   char: Char;
   letter: string;
-  items: string[];
+  items: { char: string, checked: boolean }[];
+  tooltipMessage = '';
 
   constructor(
     private charService: CharService
@@ -22,12 +23,24 @@ export class ChallengeMiddleComponent implements OnInit {
       this.letter = this.char.letter.charAt(0).toLowerCase();
       this.items = this.char.quiz[
         Math.floor(Math.random() * this.char.quiz.length)
-        ].split('');
+        ].split('').map((el: string) => {
+          return {
+            char: el,
+            checked: false
+          };
+      });
     });
   }
 
-  onSelect(item: Char): void {
-    console.log(item);
+  onSelect(item: { char: string, checked: boolean }): void {
+    const originChar = this.letter.toLowerCase();
+    const testChar = item.char.toLowerCase();
+    if (originChar === testChar) {
+      item.checked = true;
+      this.tooltipMessage = 'правильно';
+    } else {
+      this.tooltipMessage = 'не правильно';
+    }
   }
 
 }
