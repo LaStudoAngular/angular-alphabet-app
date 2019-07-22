@@ -31,28 +31,16 @@
     font-size: 3rem;
     cursor: pointer;
 
+    &:first-of-type {
+      text-transform: uppercase;
+    }
+
     &--active {
       color: darkred;
     }
   }
-}
 
-.tooltip {
-  //
-
-  &--success {
-    background-color: forestgreen;
-    padding: .2rem 1rem;
-    border-radius: 1rem;
-    margin-left: 1rem;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  &--mistake {
-    background-color: firebrick;
+  &__tooltip {
     padding: .2rem 1rem;
     border-radius: 1rem;
     margin-left: 1rem;

@@ -8,9 +8,10 @@
         [ngClass]="{'challenge-middle__item--active': item.checked}"
       >{{ item.char }}</li>
       <div
-        class="tooltip" [className]="tooltipChecked ? 'tooltip--success' : 'tooltip--mistake'"
-        [hidden]="!tooltipShow"
-      >{{ tooltipMessage }}!</div>
+        class="challenge-middle__tooltip"
+        [ngStyle]="{'backgroundColor': tooltip.checked ? 'forestgreen' : 'darkred'}"
+        [hidden]="!tooltip.show"
+      >{{ tooltip.message }}!</div>
     </ul>
   </div>
 </div>
