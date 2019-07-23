@@ -9,6 +9,7 @@
 
   &__header {
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   &__letter {
@@ -30,13 +31,14 @@
     margin: 0 .4rem;
     font-size: 3rem;
     cursor: pointer;
+    transition: color .1s ease-in;
 
     &:first-of-type {
       text-transform: uppercase;
     }
 
     &:hover {
-      color: forestgreen;
+      color: grey;
     }
 
     &--active {
@@ -52,5 +54,18 @@
     position: absolute;
     top: 0;
     right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .challenge-middle__item {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .challenge-middle__list {
+    display: flex;
+    flex-direction: column;
   }
 }
