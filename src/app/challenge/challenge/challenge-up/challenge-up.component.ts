@@ -17,9 +17,6 @@ export class ChallengeUpComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.char == null) {
-      this.charService.getSingleChar().subscribe(data => this.char = data);
-    }
     this.route.params.subscribe(data => this.char = this.charService.getChar(data.id));
   }
 
