@@ -4,7 +4,7 @@
       <a
         class="challenge-down__link" routerLink="/challenge/{{ getID(char) }}"
         (click)="onSelect(char)"
-        [ngClass]="{'challenge-down__link--active': getID(char) === currentID}"
+        [ngClass]="{'challenge-down__link--active': getID(char) === currentID, 'challenge-down__link--checked': char.checked}"
       >{{ char.letter }}</a>
     </li>
   </ul>

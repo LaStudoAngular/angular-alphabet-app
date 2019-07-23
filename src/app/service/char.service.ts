@@ -12,7 +12,7 @@ export class CharService {
     'трактор',
     'армавир',
     'амбразура'
-  ]));
+  ], false));
 
   getChars(): Char[] {
     if (!JSON.parse(localStorage.getItem('chars'))) {
@@ -22,9 +22,7 @@ export class CharService {
   }
 
   getChar(id: string): Char {
-    const chars = JSON.parse(localStorage.getItem('chars'));
-    const char: Char = chars.find((el: Char) => el.letter.charAt(0).toLowerCase() === id);
-    console.log(char);
+    const char: Char = JSON.parse(localStorage.getItem('chars')).find((el: Char) => el.letter.charAt(0).toLowerCase() === id);
     this.char$.next(char);
     return char;
   }
@@ -39,27 +37,27 @@ export class CharService {
         'трактор',
         'армавир',
         'амбразура'
-      ]),
+      ], true),
       new Char( 'Бб', 'бабочка', '../../assets/images/image-02.jpg', [
         'баклажан',
         'барбекю',
         'бомба'
-      ]),
+      ], false),
       new Char( 'Вв', 'виноград', '../../assets/images/image-03.jpg', [
         'водонос',
         'подводник',
         'аврал'
-      ]),
+      ], false),
       new Char('Гг', 'гриб', '../../assets/images/image-04.jpg', [
         'радуга',
         'кенгуру',
         'горбуша'
-      ]),
+      ], false),
       new Char('Дд', 'дерево', '../../assets/images/image-05.jpg', [
         'дуб',
         'долото',
         'двойка'
-      ])
+      ], false)
     ];
     localStorage.setItem('chars', JSON.stringify(chars));
   }

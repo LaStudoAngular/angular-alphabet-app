@@ -21,6 +21,7 @@ export class ChallengeDownComponent implements OnInit {
   }
 
   onSelect(char: Char) {
+    char.checked = true;
     this.currentID = this.getID(char);
   }
 
