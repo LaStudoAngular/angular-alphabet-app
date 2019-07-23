@@ -1,27 +1,12 @@
-# AngularAlphabetApp
+# Angular Alphabet App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+Приложение разработано с использованием `Angular 8`, `Bootstrap 4`. Под управлением `Node 11.0.0`, `npm 6.10.1`, `Angular CLI 8.1.2`, `Linux Mint 19 Cinnamon`.
 
-## Development server
+## Диапазон разрешений экранов приложения
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`1140px` - `992px` - `576px` - `400px` - `320px`
 
-## Code scaffolding
+## Установка и запуск
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Скачать приложение в виде zip-архива или склонировать репозиторий. Выполнить установку зависимостей командой `npm install`.
+2. Команда `ng serve -o` запускает приложение в режиме разработки. Приложение автоматически открывается в браузере по адресу `http://localhost:4200/`.
