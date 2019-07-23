@@ -5,6 +5,7 @@ import { ChallengeUpComponent } from './challenge/challenge-up/challenge-up.comp
 
 const routes: Routes = [
   { path: '', component: ChallengeComponent, children: [
+      { path: '', redirectTo: 'а', pathMatch: 'full' },
       { path: ':id', component: ChallengeUpComponent },
     ] }
 ];

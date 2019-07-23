@@ -24,6 +24,7 @@ export class CharService {
   getChar(id: string): Char {
     const chars = JSON.parse(localStorage.getItem('chars'));
     const char: Char = chars.find((el: Char) => el.letter.charAt(0).toLowerCase() === id);
+    console.log(char);
     this.char$.next(char);
     return char;
   }
