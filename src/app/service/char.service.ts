@@ -12,7 +12,7 @@ export class CharService {
     'трактор',
     'армавир',
     'амбразура'
-  ], false));
+  ], true));
 
   getChars(): Char[] {
     if (!JSON.parse(localStorage.getItem('chars'))) {
