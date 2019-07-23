@@ -24,3 +24,34 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .challenge-up {
+    flex-direction: column;
+
+    &__primary,
+    &__secondary {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .challenge-up__letter {
+    font-size: 10rem;
+  }
+
+  .challenge-up__image {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .challenge-up__letter {
+    font-size: 6rem;
+  }
+
+  .challenge-up__image {
+    width: 200px;
+  }
+}
