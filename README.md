@@ -1,6 +1,6 @@
 # Angular Alphabet App
 
-Тестовое приложение, сделанное для https://7gis.ru/
+Приложение, сделанное для https://7gis.ru/
 
 Приложение разработано с использованием `Angular 8`, `Bootstrap 4`. Под управлением `Node 11.0.0`, `npm 6.10.1`, `Angular CLI 8.1.2`, `Linux Mint 19 Cinnamon`.
 
